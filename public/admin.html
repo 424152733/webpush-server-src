@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#222222">
+
+  <title>Example Site | Web Push Book</title>
+  <meta name="description" content="This the example node project that
+    accompanies the web push book.">
+
+  <!-- Stylesheet -->
+  <link href="styles/push-styles.css" rel="stylesheet" type="text/css">
+  <link href="styles/demo.css" rel="stylesheet" type="text/css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700|Open+Sans|Inconsolata" rel="stylesheet">
+</head>
+
+<body>
+  <img src="/images/v2-1dffe837d4875e23bf5441ddbeb18cea_r.jpg">
+
+  <main>
+
+    <h2>Send Push Message</h2>
+
+    <div class="push-data">
+      <textarea rows="10" class="js-push-content push-content-text" disabled>{
+      "notification": {
+        "title": "推送 标题",
+        "body": "这是一条来自黄强的推送消息",
+        "icon": "/images/message.png",
+        "actions": [
+              {"action": "archive", "title": "Archive", "icon":"/images/mg.png"},
+              {"action": "like", "title": "Like", "icon":"/images/like.png"}
+        ]
+      }
+}</textarea>
+
+      <button class="js-trigger-push-msg" disabled>Trigger Push Message</button>
+    </div>
+
+    <h2>Subscriber List</h2>
+
+    <table>
+      <thead>
+        <th>Database ID</th>
+        <th>Endpoint</th>
+      </thead>
+      <tbody class="js-subscriber-table-body">
+
+      </tbody>
+    </table>
+  <script src="admin.js" async defer></script>
+</body>
+</html>
